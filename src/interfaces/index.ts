@@ -1,6 +1,8 @@
-export * from './completion';
-export * from './resources';
-export * from './prompts';
+import { CompletionArgument, Completion } from "./completion.js";
+
+export * from "./completion.js";
+export * from "./resources.js";
+export * from "./prompts.js";
 
 export interface BaseProvider {
   initialize(): Promise<void>;

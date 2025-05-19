@@ -1,4 +1,4 @@
-import { MCPRequest, MCPResponse } from '../types';
+import { MCPRequest, MCPResponse } from "../types/protocols.js";
 
 export interface PromptArgument {
   name: string;
@@ -13,7 +13,7 @@ export interface Prompt {
 }
 
 export interface ListPromptsRequest extends MCPRequest {
-  method: 'prompts/list';
+  method: "prompts/list";
 }
 
 export interface ListPromptsResponse extends MCPResponse {
@@ -23,7 +23,7 @@ export interface ListPromptsResponse extends MCPResponse {
 }
 
 export interface GetPromptRequest extends MCPRequest {
-  method: 'prompts/get';
+  method: "prompts/get";
   params: {
     name: string;
     arguments?: Record<string, string>;
@@ -31,7 +31,7 @@ export interface GetPromptRequest extends MCPRequest {
 }
 
 export interface PromptContent {
-  type: 'text' | 'image' | 'resource';
+  type: "text" | "image" | "resource";
   content: string;
   metadata?: Record<string, any>;
 }

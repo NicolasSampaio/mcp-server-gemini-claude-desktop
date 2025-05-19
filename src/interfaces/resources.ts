@@ -1,4 +1,4 @@
-import { MCPRequest, MCPResponse } from '../types';
+import { MCPRequest, MCPResponse } from "../types/protocols.js";
 
 export interface Resource {
   uri: string;
@@ -15,7 +15,7 @@ export interface ResourceTemplate {
 }
 
 export interface ListResourcesRequest extends MCPRequest {
-  method: 'resources/list';
+  method: "resources/list";
 }
 
 export interface ListResourcesResponse extends MCPResponse {
@@ -25,7 +25,7 @@ export interface ListResourcesResponse extends MCPResponse {
 }
 
 export interface ReadResourceRequest extends MCPRequest {
-  method: 'resources/read';
+  method: "resources/read";
   params: {
     uri: string;
   };

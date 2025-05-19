@@ -1,7 +1,7 @@
-import { MCPRequest, MCPResponse } from '../types';
+import { MCPRequest, MCPResponse } from "../types/protocols.js";
 
 export interface CompletionRequest extends MCPRequest {
-  method: 'completion/complete';
+  method: "completion/complete";
   params: {
     ref: ResourceReference | PromptReference;
     argument: CompletionArgument;
@@ -14,12 +14,12 @@ export interface CompletionArgument {
 }
 
 export interface ResourceReference {
-  type: 'ref/resource';
+  type: "ref/resource";
   uri: string;
 }
 
 export interface PromptReference {
-  type: 'ref/prompt';
+  type: "ref/prompt";
   name: string;
 }
 
